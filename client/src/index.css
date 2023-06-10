@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+.app {
+  display: flex;
+  flex-direction: row;
+}
+.app-title {
+  margin: 0;
+  padding: 15px 0;
+  color: #b4ffd3;
+  font-size: 20px;
+  text-align: center;
+  height: 40px;
+}
+.app-sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #3a9683;
+}
+.app-section {
+  flex: 1;
+}
+.app-dynamic-content {
+  padding: 20px;
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+  /* For Mobile: */
+  .app{
+    flex-direction: column;
+  }
+  .app-title {
+    display: none;
+  }
+  .app-sidebar{
+    width: 100%;
+    height: auto;
+  }
+  .app-section {
+    width: 100%;
+  }
+  .app-dynamic-content {
+    padding: 10px;
+  }
+  .app-header {
+    width: 100%;
+    display: block;
+  }
+}
+
+.text-input{
+    display: block;
+    width: 100%;
+    padding: .220rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-sizing: border-box;
+}
+
+.input-label-wrapper {
+  margin-bottom: 15px;
+}
+.input-label {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 14px;
+}
+
+.btn { 
+    padding: 10px 40px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 18px; 
+    outline: none; 
+    cursor: pointer; 
+
+    /* We need this to position span inside button */ 
+    position: relative; 
+    overflow: hidden; 
+    box-shadow: 6px 7px 40px -4px rgba(0, 0, 0, 0.2); 
+} 
+
+.btn-primary {
+  color: #fff; 
+  background-color: #3a9683;
+  
+}
+.btn-secondary {
+  color: #555;
+  background-color: #efefef;
+}
+
+
+/* Add animation */
+@keyframes ripple { 
+  from { 
+      opacity: 1; 
+      transform: scale(0); 
+  } 
+  to { 
+      opacity: 0; 
+      transform: scale(10); 
+  } 
+} 

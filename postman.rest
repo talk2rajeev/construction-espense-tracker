@@ -1,0 +1,190 @@
+POST http://localhost:5000/api/expense
+Content-Type: application/json
+Authorizarion: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdvb2dsZSIsImlhdCI6MTYwMjA2ODI0NCwiZXhwIjoxNjAyMDcxODQ0fQ.4R0Ze9d41QF7aNCqpzYOXW75t_9nPtsxKF-CczJr4us
+
+{
+    "exp_name": "Test",
+    "exp_vendorId": "5f6487f62748246ebc18c7c6",
+    "exp_vendor": "RS Construction",
+    "exp_amount": 1200,
+    "exp_tag": "interior",
+    "exp_date": "2020-09-17T18:30:00.000Z",
+    "no_of_days": 0
+}
+
+###
+
+GET http://localhost:5000/api/expenses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoYXJtYWZhbWlseSIsImlhdCI6MTYwNzYwMTg4MywiZXhwIjoxNjA3NjA1NDgzfQ.fEQ5WgGFgzc8iwZecgQHMXPdHBXKuMbue6sOvHWRCs0
+###
+
+POST http://localhost:5000/api/expensebydate
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoYXJtYWZhbWlseSIsImlhdCI6MTYwNzU5MzQ2MiwiZXhwIjoxNjA3NTk3MDYyfQ.frsgIw6dLmNXVNzjPdquiJl7DbknBU9h8Myflzn0Olk
+
+{
+    "vendor_id": "5f7ea52c0aac3bfb2e4a5442",
+    "exp_name": "cement"
+}
+
+###
+
+
+POST http://localhost:5000/api/expense/filter
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdvb2dsZSIsImlhdCI6MTYwMjQ3ODA5MSwiZXhwIjoxNjAyNDgxNjkxfQ.S4Chr4u7VhVa7067e_pQxJ4QBbh_rkATPbyizcs1ZOw
+
+{
+    "exp_type": "Labor"
+}
+
+###
+
+PUT http://localhost:5000/api/expense
+Content-Type: application/json
+Authorizarion: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdvb2dsZSIsImlhdCI6MTYwMjA2ODI0NCwiZXhwIjoxNjAyMDcxODQ0fQ.4R0Ze9d41QF7aNCqpzYOXW75t_9nPtsxKF-CczJr4us
+
+{
+    "id": "5f688ff73a0e073b6afa9a78",
+    "exp_name": "Balu",
+    "exp_amount": 5600,
+    "exp_tag": "product"
+}
+
+###
+
+DELETE http://localhost:5000/api/expense
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdvb2dsZSIsImlhdCI6MTYwMjEzMDA4MCwiZXhwIjoxNjAyMTMzNjgwfQ.WKGvF3VkuYokkPLMM1_UxtNF3ckWvCevrC0qZwVt2D4
+
+{
+    "id": "5f7032c0778a4b74e766af41"
+}
+
+###
+
+
+GET https://xpanzo.herokuapp.com/api/workers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdvb2dsZSIsImlhdCI6MTYwMjEzNDI0OSwiZXhwIjoxNjAyMTM3ODQ5fQ.1aZcMvo3rs4S3IkeDrwMQYdk7Rpc_rrin2PzUYsivTQ
+
+###
+
+DELETE http://localhost:5000/api/worker
+Content-Type: application/json
+Authorizarion: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdvb2dsZSIsImlhdCI6MTYwMjA2ODI0NCwiZXhwIjoxNjAyMDcxODQ0fQ.4R0Ze9d41QF7aNCqpzYOXW75t_9nPtsxKF-CczJr4us
+
+{
+    "id": "5f70308f778a4b74e766af3f"
+}
+
+###
+
+POST http://localhost:5000/api/worker
+Content-Type: application/json
+Authorizarion: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdvb2dsZSIsImlhdCI6MTYwMjA2ODI0NCwiZXhwIjoxNjAyMDcxODQ0fQ.4R0Ze9d41QF7aNCqpzYOXW75t_9nPtsxKF-CczJr4us
+
+{
+    "name": "Sokha",
+    "address": "Nchhapar",
+    "contact": "9898767654"
+}
+
+###
+
+PUT http://localhost:5000/api/worker
+Content-Type: application/json
+Authorizarion: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdvb2dsZSIsImlhdCI6MTYwMjA2ODI0NCwiZXhwIjoxNjAyMDcxODQ0fQ.4R0Ze9d41QF7aNCqpzYOXW75t_9nPtsxKF-CczJr4us
+
+{
+    "id": "5f702dc9fc001773dca9958a",
+    "name": "Raj Mistry Kumar --Updated--",
+    "address": "yes updated"
+}
+
+###
+
+POST http://localhost:5000/api/vendor
+Content-Type: application/json
+Authorizarion: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdvb2dsZSIsImlhdCI6MTYwMjA2ODI0NCwiZXhwIjoxNjAyMDcxODQ0fQ.4R0Ze9d41QF7aNCqpzYOXW75t_9nPtsxKF-CczJr4us
+
+{
+    "name": "Test Vendor",
+    "address": "Test",
+    "contact": "111"
+}
+###
+
+GET http://localhost:5000/api/vendors
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdvb2dsZSIsImlhdCI6MTYwMjEzNDI0OSwiZXhwIjoxNjAyMTM3ODQ5fQ.1aZcMvo3rs4S3IkeDrwMQYdk7Rpc_rrin2PzUYsivTQ
+
+###
+
+DELETE http://localhost:5000/api/vendor
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdvb2dsZSIsImlhdCI6MTYwMjEzNDI0OSwiZXhwIjoxNjAyMTM3ODQ5fQ.1aZcMvo3rs4S3IkeDrwMQYdk7Rpc_rrin2PzUYsivTQ
+
+{
+    "id": "5f7ea54d0aac3bfb2e4a5443"
+}
+
+###
+
+PUT http://localhost:5000/api/vendor
+Content-Type: application/json
+Authorizarion: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdvb2dsZSIsImlhdCI6MTYwMjA2ODI0NCwiZXhwIjoxNjAyMDcxODQ0fQ.4R0Ze9d41QF7aNCqpzYOXW75t_9nPtsxKF-CczJr4us
+
+{
+    "id": "5f64523e75203c5871444889",
+    "name": "VR Construction Updated",
+    "address": "GKP Updated"
+}
+
+###
+
+GET http://localhost:5000/api/vendor/5f64523e75203c5871444889
+Authorizarion: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdvb2dsZSIsImlhdCI6MTYwMjA2ODI0NCwiZXhwIjoxNjAyMDcxODQ0fQ.4R0Ze9d41QF7aNCqpzYOXW75t_9nPtsxKF-CczJr4us
+
+###
+
+POST https://xpanzo.herokuapp.com/api/signup
+Content-Type: application/json
+Authorizarion: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdvb2dsZSIsImlhdCI6MTYwMjQ3ODA5MSwiZXhwIjoxNjAyNDgxNjkxfQ.S4Chr4u7VhVa7067e_pQxJ4QBbh_rkATPbyizcs1ZOw
+
+{
+    "username": "sharmafamily",
+    "password": "rbma@123$*"
+}
+
+###
+GET http://localhost:5000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdvb2dsZSIsImlhdCI6MTYwMjQ3ODA5MSwiZXhwIjoxNjAyNDgxNjkxfQ.S4Chr4u7VhVa7067e_pQxJ4QBbh_rkATPbyizcs1ZOw
+
+###
+POST http://localhost:5000/api/token
+Content-Type: application/json
+Authorizarion: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdvb2dsZSIsImlhdCI6MTYwMjA2ODI0NCwiZXhwIjoxNjAyMDcxODQ0fQ.4R0Ze9d41QF7aNCqpzYOXW75t_9nPtsxKF-CczJr4us
+
+{
+    "id": "5f65d374cd50240d9a15f8e7",
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdvb2dsZSIsImlhdCI6MTYwMTEzODQxMSwiZXhwIjoxNjAxMTQyMDExfQ.CGpv91RXx0VcKydfbgkmQMoqtXHiADQXzwd3pV7CVGc"
+}
+
+###
+
+POST https://xpanzo.herokuapp.com/api/login
+Content-Type: application/json
+
+{
+    "username": "google",
+    "password": "google123"
+}
+
+###
+
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+    "username": "google",
+    "password": "google123"
+}
