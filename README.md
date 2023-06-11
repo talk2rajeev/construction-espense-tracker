@@ -1,6 +1,6 @@
 # construction tracker app
 
-App to track all expense related to real estate construction and help in visualizing data
+This app is for tracking all expense related to real estate construction and help in visualizing data
 
 ## Running Locally
 
